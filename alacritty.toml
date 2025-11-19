@@ -1,7 +1,7 @@
 [colors]
 [colors.primary]
-background = '#C0C0C0'
-foreground = '#000000'
+background = '#000000'
+foreground = '#C0C0C0'
 
 [colors.normal]
 black   = "#000000"
@@ -24,5 +24,5 @@ cyan    = "#00FFFF"
 white   = "#FFFFFF"
 
 [colors.cursor]
-text   = "#C0C0C0"
-cursor = "#000000"
+text   = "#000000"
+cursor = "#C0C0C0"
