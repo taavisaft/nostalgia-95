@@ -1,6 +1,144 @@
+/* Windows 95 Classic Gray Color Scheme */
 @define-color selected-text #FFFFFF;
 @define-color text #000000;
 @define-color base #C0C0C0;
 @define-color border #808080;
 @define-color foreground #000000;
 @define-color background #C0C0C0;
+
+/* Windows 95 specific colors */
+@define-color button-face #C0C0C0;
+@define-color button-shadow #808080;
+@define-color button-highlight #FFFFFF;
+@define-color button-dark-shadow #000000;
+@define-color active-title #000080;
+@define-color inactive-title #808080;
+@define-color window-bg #C0C0C0;
+@define-color window-text #000000;
+@define-color highlight #000080;
+@define-color highlight-text #FFFFFF;
+@define-color disabled-text #808080;
+@define-color dark-gray #404040;
+@define-color light-gray #E0E0E0;
+
+/* General styling */
+window {
+    background-color: @window-bg;
+    color: @window-text;
+}
+
+/* Buttons - Windows 95 3D effect */
+button {
+    background-color: @button-face;
+    color: @window-text;
+    border: 1px solid;
+    border-color: @button-highlight @button-dark-shadow @button-dark-shadow @button-highlight;
+    padding: 2px 8px;
+}
+
+button:hover {
+    background-color: @light-gray;
+}
+
+button:active {
+    border-color: @button-dark-shadow @button-highlight @button-highlight @button-dark-shadow;
+    background-color: @button-face;
+}
+
+button:disabled {
+    color: @disabled-text;
+    background-color: @button-face;
+}
+
+/* Entries and text inputs */
+entry {
+    background-color: @window-bg;
+    color: @window-text;
+    border: 2px inset @button-face;
+    padding: 2px;
+}
+
+entry:focus {
+    border-color: @highlight;
+}
+
+/* Scrollbars - Windows 95 style */
+scrollbar {
+    background-color: @button-face;
+}
+
+scrollbar slider {
+    background-color: @button-face;
+    border: 1px solid;
+    border-color: @button-dark-shadow @button-highlight @button-highlight @button-dark-shadow;
+    min-width: 15px;
+    min-height: 15px;
+}
+
+scrollbar slider:hover {
+    background-color: @light-gray;
+}
+
+scrollbar trough {
+    background-color: @button-face;
+    border: 1px inset @button-face;
+}
+
+scrollbar button {
+    background-color: @button-face;
+    border: 1px solid;
+    border-color: @button-highlight @button-dark-shadow @button-dark-shadow @button-highlight;
+    min-width: 15px;
+    min-height: 15px;
+}
+
+/* Tree view and list view */
+treeview,
+list {
+    background-color: @window-bg;
+    color: @window-text;
+}
+
+treeview:selected,
+list:selected {
+    background-color: @highlight;
+    color: @highlight-text;
+}
+
+/* Selection */
+*:selected {
+    background-color: @highlight;
+    color: @highlight-text;
+}
+
+/* Toolbar */
+toolbar {
+    background-color: @button-face;
+    border: 1px solid @button-shadow;
+}
+
+/* Status bar */
+statusbar {
+    background-color: @button-face;
+    border-top: 1px solid @button-shadow;
+    color: @window-text;
+}
+
+/* Menu */
+menu {
+    background-color: @window-bg;
+    color: @window-text;
+    border: 1px solid @button-dark-shadow;
+}
+
+menuitem:hover {
+    background-color: @highlight;
+    color: @highlight-text;
+}
+
+/* Separator */
+separator {
+    background-color: @button-shadow;
+    min-height: 1px;
+    min-width: 1px;
+}
